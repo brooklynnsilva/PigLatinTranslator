@@ -17,5 +17,30 @@ namespace PigLatinTranslator
             txtEnglish.Text = "";
             txtPigLatin.Text = "";
         }
+
+        private void btnTranslate_Click(object sender, EventArgs e)
+        {
+            string english = txtEnglish.Text.Trim();
+            if (!String.IsNullOrEmpty(english))
+            {
+                string[] words = english.Split(' ');
+                string piglatin = "";
+                foreach (string word in words)
+                {
+                    piglatin += TranslateWord(word) + " ";
+                }
+                txtPigLatin.Text = piglatin;
+            }
+            else
+            {
+                MessageBox.Show("You must enter some text to translate.", "Enter");
+                txtEnglish.Focus();
+            }
+        }
+
+        private string TranslateWord(string word)
+        {
+            return word;
+        }
     }
 }

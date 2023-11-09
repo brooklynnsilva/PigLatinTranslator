@@ -82,6 +82,7 @@
             btnTranslate.TabIndex = 5;
             btnTranslate.Text = "&Translate";
             btnTranslate.UseVisualStyleBackColor = true;
+            btnTranslate.Click += btnTranslate_Click;
             // 
             // btnExit
             // 
